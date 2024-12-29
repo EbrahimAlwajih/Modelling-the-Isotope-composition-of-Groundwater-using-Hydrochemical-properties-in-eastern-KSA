@@ -53,10 +53,10 @@ matplotlib>=3.4.0
 seaborn>=0.11.0
 scipy>=1.7.0
 joblib>=1.0.0
+```
 
 
-
-## How to Run
+### How to Run
 
 ### 1. Clone the repository:
 
