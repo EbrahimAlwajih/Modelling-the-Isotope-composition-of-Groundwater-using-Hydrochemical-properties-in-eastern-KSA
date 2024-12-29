@@ -86,7 +86,7 @@ cd groundwater-ai-prediction
     pip install -r requirements.txt
     ```
 
-### 3. Run the main script:
+4. **Run the main script:
 
 After setting up the virtual environment and installing the dependencies, you can run the main script to load the dataset, clean the data, train the models, and output the results:
 
