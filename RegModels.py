@@ -1,24 +1,18 @@
-from math import sqrt
+# from math import sqrt
 from datetime import datetime
 import pandas as pd
 import numpy as np
 from sklearn.metrics import mean_squared_error
 from joblib import dump, load
-from sklearn.ensemble import AdaBoostRegressor, BaggingRegressor, ExtraTreesRegressor
-from sklearn.ensemble import GradientBoostingRegressor, StackingRegressor
-from sklearn.preprocessing import StandardScaler
-from sklearn.pipeline import Pipeline
+from sklearn.ensemble import StackingRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsRegressor
-
 from CleaningData import data_cleansing
-from sklearn.ensemble import RandomForestRegressor
 from sklearn import svm
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 # from CompareModels import *
 from sklearn.metrics import mean_squared_error, mean_absolute_error, median_absolute_error, r2_score, explained_variance_score, mean_absolute_percentage_error
-from catboost import CatBoostRegressor
 import os,  joblib, uuid
 from itertools import combinations
 from scipy.stats import pearsonr
@@ -35,7 +29,7 @@ current_date = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
 results_folder = os.path.join(current_path, f"results_{dataset_name}_{machine_id}_{current_date}")
 os.makedirs(results_folder, exist_ok=True)
 
-url = '.\\'+dataset_name+'.csv'
+url = 'I:\My Drive\Research\AI Reaserch Team - KFUPM\code_v3\\'+dataset_name+'.csv'
 dataframe = pd.read_csv(url, header=0)
 describe = dataframe.describe(include='all')
 print(describe)
