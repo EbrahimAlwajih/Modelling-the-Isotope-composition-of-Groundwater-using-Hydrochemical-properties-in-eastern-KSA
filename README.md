@@ -1,51 +1,93 @@
-## Modelling the Isotope composition of Groundwater using Hydrochemical properties in eastern Saudi Arabia: Implementation of Innovative Data Intelligence Techniques
+# Modeling the Isotope Composition of Groundwater Using Hydrochemical Properties in Eastern Saudi Arabia: Implementation of Innovative Data Intelligence Techniques
 
-This repository contains the code and models developed to predict the isotope composition (δ¹⁸O and δ²H) of coastal groundwater using Artificial Intelligence (AI) algorithms. The study focuses on understanding the geochemical evolution of groundwater and assessing the impact of seawater intrusion in the Al-Qatif coastal region of eastern Saudi Arabia.
+## Overview
 
-## Study Overview
+This project focuses on the modeling and prediction of the isotope composition (δ¹⁸O and δ²H) of coastal groundwater in the Al-Qatif region of eastern Saudi Arabia. The region, being arid with limited surface water resources, is highly vulnerable to seawater intrusion, which affects groundwater quality. The project leverages **Artificial Intelligence (AI) models** and **data intelligence techniques** to predict groundwater isotope compositions using a dataset of hydrochemical properties from various wells in the region.
 
-- **Study Region**: The research was conducted in the Al-Qatif coastal region, which is an arid area with limited surface water resources and vulnerable to seawater intrusion.
-- **Study Focus**: The study models the prediction of isotopic composition of groundwater using AI algorithms, leveraging a hydrochemical dataset to understand the mixing processes and impact of seawater intrusion on groundwater quality.
+The study provides insights into the geochemical evolution of groundwater and the impact of seawater intrusion in arid coastal environments.
 
-## Key AI Algorithms Used
+## Key Features
 
-Eight AI algorithms were utilized to model and predict the isotopic composition of δ¹⁸O and δ²H:
+- **AI Algorithms**: Utilizes various AI models, including K-Nearest Neighbors (KNN), Support Vector Regression (SVR), Random Forest (RF), Extra Trees (ET), AdaBoost (AdaBt), Gradient Boosting (GRB), and CatBoost.
+- **Ensemble Models**: Implements Stacking Regressor to improve model accuracy by combining different base models.
+- **Performance Metrics**: Achieves high prediction accuracy with the optimal models:
+  - **δ¹⁸O (O_M1)**: R² = 0.9858, MAE = 0.0440, Pearson correlation = 0.9941.
+  - **δ²H (H_M1)**: R² = 0.9317, MAE = 0.5334, Pearson correlation = 0.9658.
+- **Insights on Groundwater Chemistry**: Identifies the primary impact of seawater intrusion on groundwater geochemistry, as evidenced by the relationship between hydrochemical parameters and isotopic compositions.
 
-1. **K-Nearest Neighbors (KNN)**
-2. **Support Vector Regression (SVR)**
-3. **Random Forest (RF)**
-4. **Extra Trees (ET)**
-5. **Bagging**
-6. **AdaBoost (AdaBt)**
-7. **Gradient Boosting (GB)**
-8. **Classification and Regression Trees (CAT)**
+## Requirements
 
-Additionally, stacking ensemble models were applied, which outperformed individual algorithms.
+To replicate this study or use the models in your own research, you need the following dependencies.
 
-## Model Performance
+### Installing Dependencies
 
-- **δ¹⁸O (O_M1) Model Performance**:
-  - R²: 0.9858
-  - Mean Absolute Error (MAE): 0.0440
-  - Pearson Correlation: 0.9941
+1. **Create a virtual environment** (recommended):
+    ```bash
+    python -m venv venv
+    ```
 
-- **δ²H (H_M1) Model Performance**:
-  - R²: 0.9317
-  - Mean Absolute Error (MAE): 0.5334
-  - Pearson Correlation: 0.9658
+2. **Activate the virtual environment**:
 
-The study demonstrates that the variation in groundwater chemistry is largely driven by mixing processes, with seawater intrusion being a primary factor affecting groundwater composition.
+    - On **Windows**:
+        ```bash
+        .\venv\Scripts\activate
+        ```
+    - On **macOS/Linux**:
+        ```bash
+        source venv/bin/activate
+        ```
 
-## Installation
+3. **Install required dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-### Prerequisites
-Ensure the following libraries and tools are installed:
+### `requirements.txt`
 
-- Python 3.x
-- Pip (Python package installer)
+```plaintext
+numpy>=1.21.0
+pandas>=1.3.0
+scikit-learn>=0.24.0
+catboost>=1.0.0
+matplotlib>=3.4.0
+seaborn>=0.11.0
+scipy>=1.7.0
+joblib>=1.0.0
 
-### Dependencies
-You can install the required dependencies by running:
+
+## How to Run
+
+### 1. Clone the repository:
 
 ```bash
-pip install -r requirements.txt
+git clone https://github.com/your-username/groundwater-ai-prediction.git
+cd groundwater-ai-prediction
+
+### 2. Set up a virtual environment and install dependencies:
+
+1. **Create a virtual environment**:
+    ```bash
+    python -m venv venv
+    ```
+
+2. **Activate the virtual environment**:
+    - On **Windows**:
+        ```bash
+        .\venv\Scripts\activate
+        ```
+    - On **macOS/Linux**:
+        ```bash
+        source venv/bin/activate
+        ```
+
+3. **Install required dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. **Run the main script:
+
+After setting up the virtual environment and installing the dependencies, you can run the main script to load the dataset, clean the data, train the models, and output the results:
+
+```bash
+python main.py
