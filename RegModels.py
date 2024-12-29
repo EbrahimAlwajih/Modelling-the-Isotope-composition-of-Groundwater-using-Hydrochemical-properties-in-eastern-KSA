@@ -97,15 +97,6 @@ models = {
         'GRB': GradientBoostingRegressor(random_state=random_state),
         'Bag' : BaggingRegressor(random_state=random_state), 
         'CAT': CatBoostRegressor(verbose=0, random_seed=random_state),
-        # 'XGB': XGBRegressor(),
-        # 'RDG': Ridge(random_state=random_state),
-        # 'ElasticNet': ElasticNet(random_state=random_state),
-        # 'DT': DecisionTreeRegressor(random_state=random_state),
-        # 'LS': Lasso(random_state=random_state),
-        # 'LGB': LGBMRegressor(random_state=random_state),        
-        # 'LR': LinearRegression(),       
-        # 'HBR': HuberRegressor(),
-        # 'NN': MLPRegressor(random_state=random_state)
 }
 
 def plotGraph(y_test,y_pred,regressorName):
@@ -194,7 +185,6 @@ def plot_models_comparison(top_models):
                 plt.close()
 
 
-# Generate all non-empty combinations of best models
 def train_stacking_models(best_models):
         model_combinations = []
         for r in range(len(best_models) + 1):
