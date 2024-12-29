@@ -21,7 +21,7 @@ from sklearn.model_selection import RepeatedKFold
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.decomposition import PCA
-from CompareModels import *
+from CompareModels1 import *
 from sklearn.metrics import mean_squared_error, mean_absolute_error, median_absolute_error, r2_score, explained_variance_score, mean_absolute_percentage_error
 from catboost import CatBoostRegressor
 import os,  joblib, uuid

@@ -5,23 +5,18 @@ import numpy as np
 from sklearn.metrics import mean_squared_error
 from joblib import dump, load
 from sklearn.ensemble import AdaBoostRegressor, BaggingRegressor, ExtraTreesRegressor
-from sklearn.ensemble import GradientBoostingRegressor, HistGradientBoostingRegressor, StackingRegressor
+from sklearn.ensemble import GradientBoostingRegressor, StackingRegressor
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
-from sklearn.model_selection import train_test_split, cross_val_score
-from sklearn.linear_model import LinearRegression, ElasticNet, Lasso, Ridge, HuberRegressor
+from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsRegressor
-from lightgbm import LGBMRegressor
-from sklearn.neural_network import MLPRegressor
+
 from CleaningData import data_cleansing
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.tree import DecisionTreeRegressor
-from xgboost import XGBRegressor
 from sklearn import svm
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
-from sklearn.decomposition import PCA
-from CompareModels import *
+# from CompareModels import *
 from sklearn.metrics import mean_squared_error, mean_absolute_error, median_absolute_error, r2_score, explained_variance_score, mean_absolute_percentage_error
 from catboost import CatBoostRegressor
 import os,  joblib, uuid
@@ -91,12 +86,12 @@ refit_score = 'neg_mean_squared_error'
 models = {
         'SVR': svm.SVR(),
         'KNN':  KNeighborsRegressor(),
-        'RF': RandomForestRegressor(random_state=random_state),
-        'ET': ExtraTreesRegressor(random_state=random_state),
-        'AdaBt': AdaBoostRegressor(random_state=random_state),
-        'GRB': GradientBoostingRegressor(random_state=random_state),
-        'Bag' : BaggingRegressor(random_state=random_state), 
-        'CAT': CatBoostRegressor(verbose=0, random_seed=random_state),
+        # 'RF': RandomForestRegressor(random_state=random_state),
+        # 'ET': ExtraTreesRegressor(random_state=random_state),
+        # 'AdaBt': AdaBoostRegressor(random_state=random_state),
+        # 'GRB': GradientBoostingRegressor(random_state=random_state),
+        # 'Bag' : BaggingRegressor(random_state=random_state), 
+        # 'CAT': CatBoostRegressor(verbose=0, random_seed=random_state),
 }
 
 def plotGraph(y_test,y_pred,regressorName):
