@@ -31,7 +31,7 @@ current_date = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
 results_folder = os.path.join(current_path, f"results_{dataset_name}_{machine_id}_{current_date}")
 os.makedirs(results_folder, exist_ok=True)
 
-url = 'I:\My Drive\Research\AI Reaserch Team - KFUPM\code_v3\\'+dataset_name+'.csv'
+url = '.\\'+dataset_name+'.csv'
 dataframe = pd.read_csv(url, header=0)
 describe = dataframe.describe(include='all')
 print(describe)
