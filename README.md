@@ -55,12 +55,13 @@ scipy>=1.7.0
 joblib>=1.0.0
 
 
+
 ## How to Run
 
 ### 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/groundwater-ai-prediction.git
+git clone https://github.com/EbrahimAlwajih/Modelling-the-Isotope-composition-of-Groundwater-using-Hydrochemical-properties-in-eastern-KSA.git
 cd groundwater-ai-prediction
 
 ### 2. Set up a virtual environment and install dependencies:
